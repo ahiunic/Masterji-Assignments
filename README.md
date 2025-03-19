@@ -1,10 +1,12 @@
-﻿# Masterji-Assignments
+
 # Masterji-Assignments
 
 # Mood Tracker Project
 
 ## Overview
 The **Mood Tracker** is a simple web application that allows users to log their daily mood using emojis, store the logs in `localStorage`, and visualize past moods through different views (day, week, month) along with a calendar representation.
+![image](https://github.com/user-attachments/assets/ccda56fc-ceaf-4483-afb7-a7076c40ed97)
+
 
 ## Features
 - **Mood Selection:** Users can select a mood for the current day using emojis (😊, 😢, 😐, 🤩, 😠).
