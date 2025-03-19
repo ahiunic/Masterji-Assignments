@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .emojis {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .emoji:hover {
+            transform: scale(1.2);
+        }
+        #mood-history, #calendar {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+        }
+        .filter-buttons {
+            margin-top: 10px;
+        }
+        .filter-buttons button {
+            margin: 5px;
+            padding: 5px 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .filter-buttons button:hover {
+            background: #0056b3;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            text-align: center;
+        }
+        .calendar-cell {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Mood Tracker</h1>
+        <div class="mood-picker">
+            <p>Select your mood for today:</p>
+            <div class="emojis">
+                <span class="emoji" data-mood="happy">😊</span>
+                <span class="emoji" data-mood="sad">😢</span>
+                <span class="emoji" data-mood="neutral">😐</span>
+                <span class="emoji" data-mood="excited">🤩</span>
+                <span class="emoji" data-mood="angry">😠</span>
+            </div>
+        </div>
+        <h2>Mood History</h2>
+        <div class="filter-buttons">
+            <button onclick="filterMoods('day')">Day</button>
+            <button onclick="filterMoods('week')">Week</button>
+            <button onclick="filterMoods('month')">Month</button>
+        </div>
+        <div id="mood-history"></div>
+        <h2>Calendar View</h2>
+        <div id="calendar" class="calendar-grid"></div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
